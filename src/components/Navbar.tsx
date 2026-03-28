@@ -44,10 +44,10 @@ export default function Navbar() {
       >
         {/* Logo */}
         <a
-          href="https://www.tradingview.com/script/fcmuXi8U-ORB-Sessions-15m-LO-NY-AS-FlowForge/"
+          href="https://www.tradingview.com/u/FlowForge/#published-scripts"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="FlowForge Trading — View ORB Sessions on TradingView"
+          aria-label="FlowForge Trading — View all published scripts on TradingView"
         >
           <Image
             src="/images/_Logo/FlowForgeLogo.PNG"

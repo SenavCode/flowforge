@@ -1,6 +1,5 @@
 'use client';
 
-import { useState, useRef, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle } from 'lucide-react';
 
@@ -18,22 +17,6 @@ const proFeatures = [
 ];
 
 export default function Pricing() {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const scrollRef = useRef<HTMLDivElement>(null);
-
-  const handleScroll = useCallback(() => {
-    const el = scrollRef.current;
-    if (!el) return;
-    const idx = Math.round(el.scrollLeft / (el.scrollWidth / 2));
-    setActiveIndex(Math.max(0, Math.min(idx, 1)));
-  }, []);
-
-  const scrollToCard = useCallback((index: number) => {
-    const el = scrollRef.current;
-    if (!el) return;
-    el.scrollTo({ left: (el.scrollWidth / 2) * index, behavior: 'smooth' });
-  }, []);
-
   return (
     <section
       id="pricing"
@@ -57,52 +40,12 @@ export default function Pricing() {
           </p>
         </motion.div>
 
-        {/* Cards — horizontal swipe on mobile, 2-col grid on desktop */}
-        <div
-          ref={scrollRef}
-          onScroll={handleScroll}
-          className="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-2 -mx-4 px-4
-                     md:grid md:grid-cols-2 md:overflow-x-visible md:snap-none md:gap-8 md:mx-0 md:px-0 md:pb-0"
-          style={{ scrollbarWidth: 'none', WebkitOverflowScrolling: 'touch' } as React.CSSProperties}
-        >
-          {/* Free */}
+        {/* Cards — stacked on mobile (Pro first), side-by-side on desktop */}
+        <div className="flex flex-col gap-6 md:grid md:grid-cols-2 md:gap-8">
+
+          {/* Pro — first in DOM = top on mobile */}
           <motion.div
-            className="snap-start shrink-0 w-[88vw] md:w-auto flex flex-col bg-[#0D0F0E] border border-[#4ADE80]/30 rounded-2xl p-8"
-            initial={{ opacity: 0, y: 28 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
-            <div className="mb-6">
-              <p className="text-[#9CA3AF] text-sm font-medium uppercase tracking-widest mb-2">
-                Free
-              </p>
-              <div className="flex items-end gap-1">
-                <span className="text-5xl font-extrabold text-[#F1F5F3]">$0</span>
-              </div>
-              <p className="text-[#9CA3AF] text-sm mt-1">Forever free</p>
-            </div>
-
-            <ul className="flex flex-col gap-3 mb-8 flex-1" role="list">
-              {freeFeatures.map((feature) => (
-                <li key={feature} className="flex items-center gap-3 text-[#9CA3AF] text-sm">
-                  <CheckCircle size={16} className="text-[#4ADE80] shrink-0" aria-hidden="true" />
-                  {feature}
-                </li>
-              ))}
-            </ul>
-
-            <a
-              href="#indicators"
-              className="block w-full text-center border border-[#2A2F2D] text-[#F1F5F3] font-semibold px-5 py-3 rounded-lg hover:border-[#4ADE80] hover:text-[#4ADE80] transition-colors duration-200"
-            >
-              Get Free Indicators
-            </a>
-          </motion.div>
-
-          {/* Pro */}
-          <motion.div
-            className="snap-start shrink-0 w-[88vw] md:w-auto flex flex-col relative bg-[#0D0F0E] border-[3px] border-[#4ADE80] rounded-2xl p-8"
+            className="flex flex-col relative bg-[#0D0F0E] border-[3px] border-[#4ADE80] rounded-2xl p-8 md:order-2"
             initial={{ opacity: 0, y: 28 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -163,22 +106,42 @@ export default function Pricing() {
               </a>
             </div>
           </motion.div>
-        </div>
 
-        {/* Mobile dot indicators */}
-        <div className="flex md:hidden justify-center gap-2 mt-5" role="tablist" aria-label="Pricing card navigation">
-          {['Free', 'Pro'].map((label, i) => (
-            <button
-              key={label}
-              role="tab"
-              aria-label={`View ${label} plan`}
-              aria-selected={activeIndex === i}
-              onClick={() => scrollToCard(i)}
-              className={`h-1.5 rounded-full transition-all duration-300 ${
-                activeIndex === i ? 'w-5 bg-[#4ADE80]' : 'w-1.5 bg-[#2A2F2D]'
-              }`}
-            />
-          ))}
+          {/* Free — second in DOM = bottom on mobile */}
+          <motion.div
+            className="flex flex-col bg-[#0D0F0E] border border-[#4ADE80]/30 rounded-2xl p-8 md:order-1"
+            initial={{ opacity: 0, y: 28 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <div className="mb-6">
+              <p className="text-[#9CA3AF] text-sm font-medium uppercase tracking-widest mb-2">
+                Free
+              </p>
+              <div className="flex items-end gap-1">
+                <span className="text-5xl font-extrabold text-[#F1F5F3]">$0</span>
+              </div>
+              <p className="text-[#9CA3AF] text-sm mt-1">Forever free</p>
+            </div>
+
+            <ul className="flex flex-col gap-3 mb-8 flex-1" role="list">
+              {freeFeatures.map((feature) => (
+                <li key={feature} className="flex items-center gap-3 text-[#9CA3AF] text-sm">
+                  <CheckCircle size={16} className="text-[#4ADE80] shrink-0" aria-hidden="true" />
+                  {feature}
+                </li>
+              ))}
+            </ul>
+
+            <a
+              href="#indicators"
+              className="block w-full text-center border border-[#2A2F2D] text-[#F1F5F3] font-semibold px-5 py-3 rounded-lg hover:border-[#4ADE80] hover:text-[#4ADE80] transition-colors duration-200"
+            >
+              Get Free Indicators
+            </a>
+          </motion.div>
+
         </div>
       </div>
     </section>

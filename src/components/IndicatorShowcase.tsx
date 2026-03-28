@@ -135,7 +135,7 @@ export default function IndicatorShowcase() {
         <motion.div
           ref={scrollRef}
           onScroll={handleScroll}
-          className="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-2 -mx-4 px-4
+          className="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-2 -mx-4 pl-6 pr-4
                      md:grid md:grid-cols-3 md:overflow-x-visible md:snap-none md:gap-6 md:mx-0 md:px-0 md:pb-0"
           style={{ scrollbarWidth: 'none', WebkitOverflowScrolling: 'touch' } as React.CSSProperties}
           variants={containerVariants}

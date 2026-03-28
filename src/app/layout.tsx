@@ -22,6 +22,11 @@ export const metadata: Metadata = {
     "fair value gap",
     "trading tools",
   ],
+  icons: {
+    icon: '/icon.png',
+    shortcut: '/icon.png',
+    apple: '/icon.png',
+  },
   openGraph: {
     title: "FlowForge Trading — Know Your Breakout Before You Trade It",
     description:

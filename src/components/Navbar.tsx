@@ -52,9 +52,9 @@ export default function Navbar() {
           <Image
             src="/images/_Logo/FlowForgeLogo.PNG"
             alt="FlowForge Trading"
-            width={140}
-            height={40}
-            className="h-9 w-auto object-contain"
+            width={180}
+            height={52}
+            className="h-11 md:h-[52px] w-auto object-contain"
             priority
           />
         </a>

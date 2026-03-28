@@ -29,9 +29,9 @@ export default function Footer() {
           <Image
             src="/images/_Logo/FlowForgeLogo.PNG"
             alt="FlowForge Trading"
-            width={130}
-            height={36}
-            className="h-8 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
+            width={220}
+            height={64}
+            className="h-16 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
           />
         </Link>
 

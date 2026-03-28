@@ -1,8 +1,13 @@
 'use client';
 
+import { useState, useRef, useCallback } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+
+const TV_FVG = 'https://www.tradingview.com/script/kohwxwA6-FVG-Imbalance-Map-FlowForge/';
+const TV_VOLUME = 'https://www.tradingview.com/script/qurqZonJ-Volume-Map-FlowForge/';
+const TV_ORB = 'https://www.tradingview.com/script/fcmuXi8U-ORB-Sessions-15m-LO-NY-AS-FlowForge/';
 
 interface IndicatorCard {
   badge: string;
@@ -13,7 +18,7 @@ interface IndicatorCard {
   bullets: string[];
   ctaLabel: string;
   ctaHref: string;
-  ctaExternal: boolean;
+  tvHref?: string;
   imageSrc: string;
   imageAlt: string;
 }
@@ -34,7 +39,7 @@ const indicators: IndicatorCard[] = [
     ],
     ctaLabel: 'Start Free Trial',
     ctaHref: 'https://tally.so/r/BzBvLN',
-    ctaExternal: true,
+    tvHref: TV_ORB,
     imageSrc: '/images/Chart Themes/1/Neon.png',
     imageAlt: 'ORB Sessions indicator on TradingView — Neon theme',
   },
@@ -51,8 +56,7 @@ const indicators: IndicatorCard[] = [
       'Works across all timeframes',
     ],
     ctaLabel: 'Get on TradingView',
-    ctaHref: '#tradingview-fvg',
-    ctaExternal: false,
+    ctaHref: TV_FVG,
     imageSrc: '/images/Chart Themes/2/Synthwave.png',
     imageAlt: 'FVG Imbalance Map indicator on TradingView',
   },
@@ -69,8 +73,7 @@ const indicators: IndicatorCard[] = [
       'Seamlessly integrates with other FlowForge tools',
     ],
     ctaLabel: 'Get on TradingView',
-    ctaHref: '#tradingview-volume',
-    ctaExternal: false,
+    ctaHref: TV_VOLUME,
     imageSrc: '/images/Chart Themes/1/Colorful.png',
     imageAlt: 'Volume Map indicator on TradingView — Colorful theme',
   },
@@ -87,6 +90,24 @@ const cardVariants = {
 };
 
 export default function IndicatorShowcase() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const handleScroll = useCallback(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const perCard = el.scrollWidth / indicators.length;
+    const idx = Math.round(el.scrollLeft / perCard);
+    setActiveIndex(Math.max(0, Math.min(idx, indicators.length - 1)));
+  }, []);
+
+  const scrollToCard = useCallback((index: number) => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const perCard = el.scrollWidth / indicators.length;
+    el.scrollTo({ left: perCard * index, behavior: 'smooth' });
+  }, []);
+
   return (
     <section
       id="indicators"
@@ -106,13 +127,17 @@ export default function IndicatorShowcase() {
             The FlowForge Suite
           </h2>
           <p className="text-[#9CA3AF] text-lg max-w-2xl mx-auto">
-            Three precision-built indicators designed to work together. Free to start, Pro to unlock the flagship.
+            Three precision-built indicators designed to work together. Start free, go Pro when you&apos;re ready.
           </p>
         </motion.div>
 
-        {/* Cards grid */}
+        {/* Cards — horizontal swipe on mobile, 3-col grid on desktop */}
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-3 gap-6"
+          ref={scrollRef}
+          onScroll={handleScroll}
+          className="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-2 -mx-4 px-4
+                     md:grid md:grid-cols-3 md:overflow-x-visible md:snap-none md:gap-6 md:mx-0 md:px-0 md:pb-0"
+          style={{ scrollbarWidth: 'none', WebkitOverflowScrolling: 'touch' } as React.CSSProperties}
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -122,7 +147,7 @@ export default function IndicatorShowcase() {
             <motion.article
               key={card.title}
               variants={cardVariants}
-              className={`flex flex-col rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 ${
+              className={`snap-start shrink-0 w-[82vw] md:w-auto flex flex-col rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 ${
                 card.flagship
                   ? 'border-2 border-[#4ADE80] bg-[#161918] hover:shadow-[0_0_28px_rgba(74,222,128,0.2)]'
                   : 'border border-[#2A2F2D] bg-[#161918] hover:border-[#3D4440] hover:shadow-[0_0_16px_rgba(0,0,0,0.3)]'
@@ -135,7 +160,7 @@ export default function IndicatorShowcase() {
                   alt={card.imageAlt}
                   fill
                   className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 33vw"
+                  sizes="(max-width: 768px) 82vw, 33vw"
                 />
                 {/* Badge overlay */}
                 <div className="absolute top-3 left-3">
@@ -161,7 +186,7 @@ export default function IndicatorShowcase() {
                   {card.description}
                 </p>
 
-                <ul className="flex flex-col gap-2 mt-1">
+                <ul className="flex flex-col gap-2 mt-1 flex-1">
                   {card.bullets.map((bullet) => (
                     <li
                       key={bullet}
@@ -173,8 +198,8 @@ export default function IndicatorShowcase() {
                   ))}
                 </ul>
 
-                <div className="mt-auto pt-4">
-                  {card.ctaExternal ? (
+                <div className="mt-auto pt-4 flex flex-col gap-2">
+                  {card.flagship ? (
                     <a
                       href={card.ctaHref}
                       target="_blank"
@@ -187,10 +212,24 @@ export default function IndicatorShowcase() {
                   ) : (
                     <a
                       href={card.ctaHref}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 w-full justify-center border border-[#2A2F2D] text-[#9CA3AF] font-semibold text-sm px-5 py-2.5 rounded-lg hover:border-[#3D4440] hover:text-[#F1F5F3] transition-colors duration-200"
                     >
                       {card.ctaLabel}
                       <ArrowRight size={14} />
+                    </a>
+                  )}
+
+                  {/* Secondary TradingView link — ORB card only */}
+                  {card.tvHref && (
+                    <a
+                      href={card.tvHref}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center gap-1 text-[#9CA3AF] text-xs hover:text-[#F1F5F3] transition-colors duration-200"
+                    >
+                      View on TradingView →
                     </a>
                   )}
                 </div>
@@ -198,6 +237,22 @@ export default function IndicatorShowcase() {
             </motion.article>
           ))}
         </motion.div>
+
+        {/* Mobile dot indicators */}
+        <div className="flex md:hidden justify-center gap-2 mt-5" role="tablist" aria-label="Indicator card navigation">
+          {indicators.map((card, i) => (
+            <button
+              key={card.title}
+              role="tab"
+              aria-label={`View ${card.title}`}
+              aria-selected={activeIndex === i}
+              onClick={() => scrollToCard(i)}
+              className={`h-1.5 rounded-full transition-all duration-300 ${
+                activeIndex === i ? 'w-5 bg-[#4ADE80]' : 'w-1.5 bg-[#2A2F2D]'
+              }`}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );

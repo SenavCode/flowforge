@@ -1,5 +1,6 @@
 'use client';
 
+import { useState, useRef, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle } from 'lucide-react';
 
@@ -17,6 +18,22 @@ const proFeatures = [
 ];
 
 export default function Pricing() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const handleScroll = useCallback(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const idx = Math.round(el.scrollLeft / (el.scrollWidth / 2));
+    setActiveIndex(Math.max(0, Math.min(idx, 1)));
+  }, []);
+
+  const scrollToCard = useCallback((index: number) => {
+    const el = scrollRef.current;
+    if (!el) return;
+    el.scrollTo({ left: (el.scrollWidth / 2) * index, behavior: 'smooth' });
+  }, []);
+
   return (
     <section
       id="pricing"
@@ -40,11 +57,17 @@ export default function Pricing() {
           </p>
         </motion.div>
 
-        {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* Cards — horizontal swipe on mobile, 2-col grid on desktop */}
+        <div
+          ref={scrollRef}
+          onScroll={handleScroll}
+          className="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-2 -mx-4 px-4
+                     md:grid md:grid-cols-2 md:overflow-x-visible md:snap-none md:gap-8 md:mx-0 md:px-0 md:pb-0"
+          style={{ scrollbarWidth: 'none', WebkitOverflowScrolling: 'touch' } as React.CSSProperties}
+        >
           {/* Free */}
           <motion.div
-            className="flex flex-col bg-[#0D0F0E] border border-[#4ADE80]/30 rounded-2xl p-8"
+            className="snap-start shrink-0 w-[88vw] md:w-auto flex flex-col bg-[#0D0F0E] border border-[#4ADE80]/30 rounded-2xl p-8"
             initial={{ opacity: 0, y: 28 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -79,7 +102,7 @@ export default function Pricing() {
 
           {/* Pro */}
           <motion.div
-            className="flex flex-col relative bg-[#0D0F0E] border-[3px] border-[#4ADE80] rounded-2xl p-8"
+            className="snap-start shrink-0 w-[88vw] md:w-auto flex flex-col relative bg-[#0D0F0E] border-[3px] border-[#4ADE80] rounded-2xl p-8"
             initial={{ opacity: 0, y: 28 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -140,6 +163,22 @@ export default function Pricing() {
               </a>
             </div>
           </motion.div>
+        </div>
+
+        {/* Mobile dot indicators */}
+        <div className="flex md:hidden justify-center gap-2 mt-5" role="tablist" aria-label="Pricing card navigation">
+          {['Free', 'Pro'].map((label, i) => (
+            <button
+              key={label}
+              role="tab"
+              aria-label={`View ${label} plan`}
+              aria-selected={activeIndex === i}
+              onClick={() => scrollToCard(i)}
+              className={`h-1.5 rounded-full transition-all duration-300 ${
+                activeIndex === i ? 'w-5 bg-[#4ADE80]' : 'w-1.5 bg-[#2A2F2D]'
+              }`}
+            />
+          ))}
         </div>
       </div>
     </section>

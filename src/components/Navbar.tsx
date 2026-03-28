@@ -43,7 +43,12 @@ export default function Navbar() {
         aria-label="Main navigation"
       >
         {/* Logo */}
-        <Link href="#home" aria-label="FlowForge Trading — Home">
+        <a
+          href="https://www.tradingview.com/script/fcmuXi8U-ORB-Sessions-15m-LO-NY-AS-FlowForge/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="FlowForge Trading — View ORB Sessions on TradingView"
+        >
           <Image
             src="/images/_Logo/FlowForgeLogo.PNG"
             alt="FlowForge Trading"
@@ -52,7 +57,7 @@ export default function Navbar() {
             className="h-9 w-auto object-contain"
             priority
           />
-        </Link>
+        </a>
 
         {/* Desktop nav links */}
         <ul className="hidden md:flex items-center gap-8" role="list">

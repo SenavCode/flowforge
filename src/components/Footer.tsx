@@ -61,15 +61,7 @@ export default function Footer() {
                 </li>
               )
             )}
-            <li>
-              <a
-                href="#twitter"
-                className="text-[#9CA3AF] hover:text-[#4ADE80] text-sm transition-colors"
-                aria-label="FlowForge Trading on Twitter/X (coming soon)"
-              >
-                Twitter/X
-              </a>
-            </li>
+
           </ul>
         </nav>
 

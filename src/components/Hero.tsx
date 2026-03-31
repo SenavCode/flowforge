@@ -121,10 +121,12 @@ export default function Hero() {
             Start Free Trial
           </a>
           <a
-            href="#indicators"
+            href="https://flowforgetrading.gumroad.com/l/flowforge"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center border border-[#2A2F2D] text-[#F1F5F3] font-semibold px-7 py-3.5 rounded-lg hover:border-[#4ADE80] hover:text-[#4ADE80] transition-colors duration-200 text-base"
           >
-            View Indicators
+            Get Full Access
           </a>
         </motion.div>
 

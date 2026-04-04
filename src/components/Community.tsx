@@ -33,7 +33,7 @@ export default function Community() {
 
           {/* Description */}
           <p className="text-[#9CA3AF] text-lg max-w-xl leading-relaxed">
-            Connect with other futures traders, share setups, get support, and stay updated on new indicators.
+            Live breakout alerts, members-only playbook, shared setups, and direct support. The FlowForge Discord is where the trading happens.
           </p>
 
           {/* Discord CTA */}

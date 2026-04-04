@@ -12,6 +12,8 @@ const freeFeatures = [
 const proFeatures = [
   'Everything in Free',
   'ORB Sessions 15m (LO/NY/AS)',
+  'Live ORB breakout alerts on Discord',
+  'Members-only Playbook',
   'Priority support',
   'Early access to new indicators',
 ];

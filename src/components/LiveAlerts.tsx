@@ -37,7 +37,7 @@ export default function LiveAlerts() {
           </div>
 
           <p className="text-[#9CA3AF] text-lg max-w-2xl leading-relaxed">
-            Get real-time ORB breakout alerts delivered straight to Discord. Every signal graded, every session covered. Available exclusively for members.
+            Real-time ORB breakout alerts delivered to Discord. Only OK-graded signals, only clean setups. Available exclusively for members.
           </p>
         </motion.div>
 

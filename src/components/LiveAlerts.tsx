@@ -38,8 +38,8 @@ export default function LiveAlerts() {
 
         {/* Screenshot */}
         <motion.div
-          initial={{ opacity: 0, y: 28, rotate: 0 }}
-          whileInView={{ opacity: 1, y: 0, rotate: 1 }}
+          initial={{ opacity: 0, y: 28 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.65, ease: 'easeOut' }}
           className="w-full max-w-2xl"
@@ -49,7 +49,7 @@ export default function LiveAlerts() {
             style={{ boxShadow: '0 0 48px rgba(74, 222, 128, 0.12), 0 8px 32px rgba(0,0,0,0.4)' }}
           >
             <Image
-              src="/discord-signals.png"
+              src="/images/Alerts/Alerts.png"
               alt="Live ORB breakout alerts in the FlowForge Discord"
               width={900}
               height={560}

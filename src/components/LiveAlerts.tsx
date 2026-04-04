@@ -49,7 +49,7 @@ export default function LiveAlerts() {
             style={{ boxShadow: '0 0 48px rgba(74, 222, 128, 0.12), 0 8px 32px rgba(0,0,0,0.4)' }}
           >
             <Image
-              src="/images/Alerts/Alerts.png"
+              src="/discord-signals.png"
               alt="Live ORB breakout alerts in the FlowForge Discord"
               width={900}
               height={560}

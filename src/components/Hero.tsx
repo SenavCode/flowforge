@@ -6,20 +6,20 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const chartImages = [
-  { src: '/images/Chart Themes/1/Synthwave.png', alt: 'FlowForge TradingView ORB indicator — Synthwave chart theme' },
-  { src: '/images/Chart Themes/1/Neon.png',      alt: 'FlowForge TradingView ORB indicator — Neon chart theme' },
-  { src: '/images/Chart Themes/1/Dusk.png',       alt: 'FlowForge TradingView ORB indicator — Dusk chart theme' },
-  { src: '/images/Chart Themes/1/Arctic.png',     alt: 'FlowForge TradingView ORB indicator — Arctic chart theme' },
-  { src: '/images/Chart Themes/1/Colorful.png',   alt: 'FlowForge TradingView ORB indicator — Colorful chart theme' },
-  { src: '/images/Chart Themes/1/Sunny.png',      alt: 'FlowForge TradingView ORB indicator — Sunny chart theme' },
-  { src: '/images/Chart Themes/1/Monochrome.png', alt: 'FlowForge TradingView ORB indicator — Monochrome chart theme' },
-  { src: '/images/Chart Themes/2/Synthwave.png',  alt: 'FlowForge TradingView ORB indicator — Synthwave v2 chart theme' },
-  { src: '/images/Chart Themes/2/Neon.png',       alt: 'FlowForge TradingView ORB indicator — Neon v2 chart theme' },
-  { src: '/images/Chart Themes/2/Dusk.png',       alt: 'FlowForge TradingView ORB indicator — Dusk v2 chart theme' },
-  { src: '/images/Chart Themes/2/Arctic.png',     alt: 'FlowForge TradingView ORB indicator — Arctic v2 chart theme' },
-  { src: '/images/Chart Themes/2/Colorful.png',   alt: 'FlowForge TradingView ORB indicator — Colorful v2 chart theme' },
-  { src: '/images/Chart Themes/2/Sunny.png',      alt: 'FlowForge TradingView ORB indicator — Sunny v2 chart theme' },
-  { src: '/images/Chart Themes/2/Monochrome.png', alt: 'FlowForge TradingView ORB indicator — Monochrome v2 chart theme' },
+  { src: '/images/Chart Themes/1/Synthwave.png', alt: 'FlowForge TradingView ORB indicator,Synthwave chart theme' },
+  { src: '/images/Chart Themes/1/Neon.png',      alt: 'FlowForge TradingView ORB indicator,Neon chart theme' },
+  { src: '/images/Chart Themes/1/Dusk.png',       alt: 'FlowForge TradingView ORB indicator,Dusk chart theme' },
+  { src: '/images/Chart Themes/1/Arctic.png',     alt: 'FlowForge TradingView ORB indicator,Arctic chart theme' },
+  { src: '/images/Chart Themes/1/Colorful.png',   alt: 'FlowForge TradingView ORB indicator,Colorful chart theme' },
+  { src: '/images/Chart Themes/1/Sunny.png',      alt: 'FlowForge TradingView ORB indicator,Sunny chart theme' },
+  { src: '/images/Chart Themes/1/Monochrome.png', alt: 'FlowForge TradingView ORB indicator,Monochrome chart theme' },
+  { src: '/images/Chart Themes/2/Synthwave.png',  alt: 'FlowForge TradingView ORB indicator,Synthwave v2 chart theme' },
+  { src: '/images/Chart Themes/2/Neon.png',       alt: 'FlowForge TradingView ORB indicator,Neon v2 chart theme' },
+  { src: '/images/Chart Themes/2/Dusk.png',       alt: 'FlowForge TradingView ORB indicator,Dusk v2 chart theme' },
+  { src: '/images/Chart Themes/2/Arctic.png',     alt: 'FlowForge TradingView ORB indicator,Arctic v2 chart theme' },
+  { src: '/images/Chart Themes/2/Colorful.png',   alt: 'FlowForge TradingView ORB indicator,Colorful v2 chart theme' },
+  { src: '/images/Chart Themes/2/Sunny.png',      alt: 'FlowForge TradingView ORB indicator,Sunny v2 chart theme' },
+  { src: '/images/Chart Themes/2/Monochrome.png', alt: 'FlowForge TradingView ORB indicator,Monochrome v2 chart theme' },
 ];
 
 export default function Hero() {
@@ -80,7 +80,7 @@ export default function Hero() {
         >
           <span className="inline-flex items-center gap-2 bg-[#161918] border border-[#2A2F2D] text-[#4ADE80] text-xs font-medium px-4 py-1.5 rounded-full">
             <span className="w-1.5 h-1.5 rounded-full bg-[#4ADE80] animate-pulse" aria-hidden="true" />
-            TradingView Pine Script Indicators — Futures Trading
+            TradingView Pine Script Indicators for Futures Trading
           </span>
         </motion.div>
 
@@ -102,7 +102,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          ORB boxes, FVG zones, and live breakout alerts — all on one chart.
+          ORB boxes, FVG zones, and live breakout alerts, all on one chart.
         </motion.p>
 
         {/* CTAs */}
@@ -137,7 +137,7 @@ export default function Hero() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          Free trial available. Full access via Gumroad — $15/mo.
+          Free trial available. Full access via Gumroad, $15/mo.
         </motion.p>
 
         {/* Chart image carousel */}

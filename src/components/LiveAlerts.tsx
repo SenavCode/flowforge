@@ -150,7 +150,7 @@ export default function LiveAlerts() {
             className="inline-flex items-center gap-2 bg-[#4ADE80] hover:bg-[#22C55E] text-[#0D0F0E] font-bold text-base px-8 py-4 rounded-lg transition-colors duration-200"
             aria-label="Start a free trial to get ORB breakout alerts"
           >
-            Get ORB Alerts — Start Free Trial
+            Get ORB Alerts, Start Free Trial
           </a>
           <a
             href="https://discord.com/invite/tu7WTrur6z"

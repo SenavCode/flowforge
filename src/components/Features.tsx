@@ -37,7 +37,7 @@ const features = [
     iconColor: '#4ADE80',
     title: 'Live Session Dashboard',
     description:
-      'Session name, ORB high/low, breakout status, and direction — all visible on-chart without opening settings.',
+      'Session name, ORB high/low, breakout status, and direction, all visible on-chart without opening settings.',
   },
   {
     icon: Target,
@@ -78,7 +78,7 @@ export default function Features() {
             What&apos;s Actually Under the Hood
           </h2>
           <p className="text-[#9CA3AF] text-lg max-w-2xl mx-auto">
-            Session detection, signal filtering, multi-timeframe FVG mapping — here&apos;s how the pieces connect.
+            Session detection, signal filtering, multi-timeframe FVG mapping. Here&apos;s how the pieces connect.
           </p>
         </motion.div>
 

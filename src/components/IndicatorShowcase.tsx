@@ -41,7 +41,7 @@ const indicators: IndicatorCard[] = [
     ctaHref: 'https://tally.so/r/BzBvLN',
     tvHref: TV_ORB,
     imageSrc: '/images/Chart Themes/1/Neon.png',
-    imageAlt: 'ORB Sessions indicator on TradingView — Neon theme',
+    imageAlt: 'ORB Sessions indicator on TradingView, Neon theme',
   },
   {
     badge: 'FREE',
@@ -75,7 +75,7 @@ const indicators: IndicatorCard[] = [
     ctaLabel: 'Get on TradingView',
     ctaHref: TV_VOLUME,
     imageSrc: '/images/Chart Themes/1/Colorful.png',
-    imageAlt: 'Volume Map indicator on TradingView — Colorful theme',
+    imageAlt: 'Volume Map indicator on TradingView, Colorful theme',
   },
 ];
 
@@ -124,10 +124,10 @@ export default function IndicatorShowcase() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#F1F5F3] mb-4">
-            Three Indicators. One Setup. Everything You Need for the ORB.
+            Three Indicators. One Setup.
           </h2>
           <p className="text-[#9CA3AF] text-lg max-w-2xl mx-auto">
-            ORB Sessions tracks the range and confirms the break. FVG Map shows where price is likely to react. Volume Map keeps the chart clean. FVG and Volume are free.
+            ORB Sessions tracks the range and confirms the break. FVG Imbalance Map shows where price is likely to react. Volume Map keeps the chart clean. Everything you need for the ORB, and FVG Imbalance Map and Volume Map are free.
           </p>
         </motion.div>
 

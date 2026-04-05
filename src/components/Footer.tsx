@@ -33,10 +33,10 @@ export default function Footer() {
     >
       <div className="max-w-7xl mx-auto flex flex-col items-center gap-8 text-center">
         {/* Logo */}
-        <Link href="#home" aria-label="FlowForge Trading — Back to top">
+        <Link href="#home" aria-label="FlowForge Trading, back to top">
           <Image
             src="/images/_Logo/FlowForgeLogo.PNG"
-            alt="FlowForge Trading — TradingView Indicators"
+            alt="FlowForge Trading TradingView Indicators"
             width={220}
             height={64}
             className="h-16 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"

@@ -6,7 +6,7 @@ import { MessageCircle, BarChart2, Bell, Target } from 'lucide-react';
 const pills = [
   { icon: BarChart2, label: 'Automated ORB breakout alerts' },
   { icon: Bell, label: 'Members-only trading playbook' },
-  { icon: Target, label: 'Shared MES/MNQ setups' },
+  { icon: Target, label: 'Community chart discussion' },
 ];
 
 export default function Community() {
@@ -27,7 +27,7 @@ export default function Community() {
           {/* Badge */}
           <span className="inline-flex items-center gap-2 bg-[#161918] border border-[#2A2F2D] text-[#9CA3AF] text-sm px-4 py-2 rounded-full">
             <MessageCircle size={14} className="text-[#4ADE80]" aria-hidden="true" />
-            Members-only Discord — live signals, setups, and support
+            Free to join Discord, members-only signals section
           </span>
 
           {/* Headline */}

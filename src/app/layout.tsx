@@ -10,9 +10,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "FlowForge Trading — TradingView Indicators for Futures Traders",
+  title: "FlowForge Trading | TradingView Indicators for Futures Traders",
   description:
-    "Precision-built TradingView Pine Script indicators for futures traders. ORB breakout alerts, FVG detection, and session tracking — all on one chart.",
+    "Precision-built TradingView Pine Script indicators for futures traders. ORB breakout alerts, FVG detection, and session tracking, all on one chart.",
   keywords: [
     "TradingView indicators",
     "futures trading",
@@ -38,9 +38,9 @@ export const metadata: Metadata = {
     canonical: "https://flowforge-trading.com",
   },
   openGraph: {
-    title: "FlowForge Trading — TradingView Indicators for Futures Traders",
+    title: "FlowForge Trading | TradingView Indicators for Futures Traders",
     description:
-      "Precision-built TradingView Pine Script indicators for futures traders. ORB breakout alerts, FVG detection, and session tracking — all on one chart.",
+      "Precision-built TradingView Pine Script indicators for futures traders. ORB breakout alerts, FVG detection, and session tracking, all on one chart.",
     url: "https://flowforge-trading.com",
     siteName: "FlowForge Trading",
     type: "website",
@@ -50,15 +50,15 @@ export const metadata: Metadata = {
         url: "https://flowforge-trading.com/og-image.png",
         width: 1200,
         height: 630,
-        alt: "FlowForge Trading — TradingView Indicators for Futures Traders",
+        alt: "FlowForge Trading | TradingView Indicators for Futures Traders",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "FlowForge Trading — TradingView Indicators for Futures Traders",
+    title: "FlowForge Trading | TradingView Indicators for Futures Traders",
     description:
-      "Precision-built TradingView Pine Script indicators for futures traders. ORB breakout alerts, FVG detection, and session tracking — all on one chart.",
+      "Precision-built TradingView Pine Script indicators for futures traders. ORB breakout alerts, FVG detection, and session tracking, all on one chart.",
     images: ["https://flowforge-trading.com/og-image.png"],
   },
   metadataBase: new URL("https://flowforge-trading.com"),

@@ -45,7 +45,7 @@ export default function Navbar() {
         aria-label="Main navigation"
       >
         {/* Logo — links to top of page */}
-        <a href="#home" aria-label="FlowForge Trading — Back to top">
+        <a href="#home" aria-label="FlowForge Trading, back to top">
           <Image
             src="/images/_Logo/FlowForgeLogo.PNG"
             alt="FlowForge Trading"

@@ -8,7 +8,7 @@ const faqs = [
   {
     question: 'What markets does this work on?',
     answer:
-      'Any market available on TradingView. We run alerts on 9 futures contracts (MES, MNQ, M2K, MYM, MGC, SIL, HG, CL, NG) but the indicator works on stocks, forex, crypto, and commodities too.',
+      'Any market available on TradingView. We run alerts on 9 futures contracts (MES1!, MNQ1!, M2K1!, MYM1!, MGC1!, SIL1!, MHGK20, MCL1!, NG1!) but the indicator works on stocks, forex, crypto, and commodities too.',
   },
   {
     question: 'Do I need a paid TradingView plan?',
@@ -18,7 +18,7 @@ const faqs = [
   {
     question: 'How do the Discord alerts work?',
     answer:
-      'When the ORB indicator detects a confirmed breakout with all quality filters passing, an alert fires automatically to the members-only signals channel on Discord. You get the instrument, session, direction, and signal grade in real time.',
+      'When the ORB indicator detects a confirmed opening range breakout (ORB) with all quality filters passing, an alert fires automatically to the members-only signals channel on Discord. You get the instrument, session, direction, and signal grade in real time.',
   },
   {
     question: 'Can I try before I subscribe?',
@@ -28,12 +28,17 @@ const faqs = [
   {
     question: 'What is an OK signal?',
     answer:
-      'OK means all quality filters passed on the breakout. The indicator grades every breakout and only fires an alert when conditions meet the filter criteria. This reduces noise and helps you focus on the cleanest setups.',
+      'OK means all quality filters passed on the opening range breakout. The indicator grades every breakout and only fires an alert when conditions meet the filter criteria. This reduces noise and helps you focus on the cleanest setups.',
   },
   {
     question: 'How do I cancel?',
     answer:
       'You can cancel anytime through Gumroad. No lock-in, no questions asked.',
+  },
+  {
+    question: 'Are these indicators built in Pine Script?',
+    answer:
+      'Yes. All FlowForge indicators are built in TradingView Pine Script and work natively on any TradingView chart.',
   },
 ];
 

@@ -3,7 +3,10 @@ import Link from 'next/link';
 
 const footerLinks = [
   { label: 'Indicators', href: '#indicators' },
+  { label: 'Features', href: '#features' },
+  { label: 'How It Works', href: '#how-it-works' },
   { label: 'Pricing', href: '#pricing' },
+  { label: 'FAQ', href: '#faq' },
   {
     label: 'Discord',
     href: 'https://discord.com/invite/tu7WTrur6z',
@@ -12,6 +15,11 @@ const footerLinks = [
   {
     label: 'Gumroad',
     href: 'https://flowforgetrading.gumroad.com/l/flowforge',
+    external: true,
+  },
+  {
+    label: 'TradingView',
+    href: 'https://www.tradingview.com/u/FlowForge/#published-scripts',
     external: true,
   },
 ];
@@ -28,7 +36,7 @@ export default function Footer() {
         <Link href="#home" aria-label="FlowForge Trading — Back to top">
           <Image
             src="/images/_Logo/FlowForgeLogo.PNG"
-            alt="FlowForge Trading"
+            alt="FlowForge Trading — TradingView Indicators"
             width={220}
             height={64}
             className="h-16 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
@@ -61,7 +69,6 @@ export default function Footer() {
                 </li>
               )
             )}
-
           </ul>
         </nav>
 

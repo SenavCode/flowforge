@@ -3,7 +3,11 @@
 import { motion } from 'framer-motion';
 import { MessageCircle } from 'lucide-react';
 
-const pills = ['📊 Chart setups', '🔔 New indicator alerts', '🎯 Trade ideas'];
+const pills = [
+  { emoji: '📊', label: 'Chart setups' },
+  { emoji: '🔔', label: 'New indicator alerts' },
+  { emoji: '🎯', label: 'Trade ideas' },
+];
 
 export default function Community() {
   return (
@@ -33,7 +37,7 @@ export default function Community() {
 
           {/* Description */}
           <p className="text-[#9CA3AF] text-lg max-w-xl leading-relaxed">
-            Live breakout alerts, members-only playbook, shared setups, and direct support. The FlowForge Discord is where the trading happens.
+            Live ORB breakout alerts, members-only trading playbook, shared futures setups, and direct support. The FlowForge Discord is where the trading happens.
           </p>
 
           {/* Discord CTA */}
@@ -56,11 +60,12 @@ export default function Community() {
           <div className="flex flex-wrap justify-center gap-3 mt-2" role="list" aria-label="Community topics">
             {pills.map((pill) => (
               <span
-                key={pill}
+                key={pill.label}
                 role="listitem"
                 className="bg-[#161918] border border-[#2A2F2D] text-[#9CA3AF] text-sm px-4 py-2 rounded-full"
               >
-                {pill}
+                <span aria-hidden="true">{pill.emoji} </span>
+                {pill.label}
               </span>
             ))}
           </div>

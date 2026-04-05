@@ -10,6 +10,7 @@ const navLinks = [
   { label: 'Features', href: '#features' },
   { label: 'Pricing', href: '#pricing' },
   { label: 'Community', href: '#community' },
+  { label: 'FAQ', href: '#faq' },
 ];
 
 export default function Navbar() {
@@ -42,13 +43,8 @@ export default function Navbar() {
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16"
         aria-label="Main navigation"
       >
-        {/* Logo */}
-        <a
-          href="https://www.tradingview.com/u/FlowForge/#published-scripts"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="FlowForge Trading — View all published scripts on TradingView"
-        >
+        {/* Logo — links to top of page */}
+        <a href="#home" aria-label="FlowForge Trading — Back to top">
           <Image
             src="/images/_Logo/FlowForgeLogo.PNG"
             alt="FlowForge Trading"

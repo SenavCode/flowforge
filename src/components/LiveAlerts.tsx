@@ -6,9 +6,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { MessageCircle } from 'lucide-react';
 
 const signalImages = [
-  { src: '/discord-signals.png', alt: 'Live ORB breakout alerts in the FlowForge Discord' },
-  { src: '/discord-sign2.png',   alt: 'FlowForge Discord signal — chart 2' },
-  { src: '/discord-sign3.png',   alt: 'FlowForge Discord signal — chart 3' },
+  { src: '/discord-sign2.png', alt: 'Live ORB breakout alert in the FlowForge Discord' },
+  { src: '/discord-sign3.png', alt: 'FlowForge Discord signal — chart 2' },
 ];
 
 const tickers = ['MES1!', 'MNQ1!', 'M2K1!', 'MYM1!', 'MGC1!', 'SIL1!', 'MHGK20', 'MCL1!', 'NG1!'];
@@ -70,7 +69,7 @@ export default function LiveAlerts() {
         >
           <div className="relative rounded-2xl overflow-hidden border border-[#2A2F2D]">
             {/* Aspect ratio container */}
-            <div className="aspect-video relative">
+            <div className="aspect-video relative bg-[#0D0F0E]">
               <AnimatePresence mode="sync">
                 <motion.div
                   key={currentIndex}
@@ -84,7 +83,7 @@ export default function LiveAlerts() {
                     src={signalImages[currentIndex].src}
                     alt={signalImages[currentIndex].alt}
                     fill
-                    className="object-cover"
+                    className="object-contain"
                     sizes="(max-width: 768px) 100vw, 672px"
                   />
                 </motion.div>

@@ -29,8 +29,8 @@ export default function CTASection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0 }}
         >
-          Know your breakout{' '}
-          <span className="text-[#4ADE80]">before you trade it.</span>
+          Start Trading{' '}
+          <span className="text-[#4ADE80]">with Confidence</span>
         </motion.h2>
 
         {/* Subtext */}
@@ -72,7 +72,7 @@ export default function CTASection() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
-          Or purchase directly →
+          Or purchase directly on Gumroad →
         </motion.a>
       </div>
     </section>

@@ -9,7 +9,7 @@ const features = [
     iconColor: '#4ADE80',
     title: 'Session Intelligence',
     description:
-      'Know exactly when London, New York, and Asia open. Track breakouts as they happen with confirmed-close detection.',
+      'Track ORB breakouts as they happen with confirmed-close detection across London, New York, and Asia sessions on TradingView.',
   },
   {
     icon: Layers,

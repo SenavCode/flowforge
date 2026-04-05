@@ -6,20 +6,20 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const chartImages = [
-  { src: '/images/Chart Themes/1/Synthwave.png', alt: 'FlowForge indicators — Synthwave theme' },
-  { src: '/images/Chart Themes/1/Neon.png',      alt: 'FlowForge indicators — Neon theme' },
-  { src: '/images/Chart Themes/1/Dusk.png',       alt: 'FlowForge indicators — Dusk theme' },
-  { src: '/images/Chart Themes/1/Arctic.png',     alt: 'FlowForge indicators — Arctic theme' },
-  { src: '/images/Chart Themes/1/Colorful.png',   alt: 'FlowForge indicators — Colorful theme' },
-  { src: '/images/Chart Themes/1/Sunny.png',      alt: 'FlowForge indicators — Sunny theme' },
-  { src: '/images/Chart Themes/1/Monochrome.png', alt: 'FlowForge indicators — Monochrome theme' },
-  { src: '/images/Chart Themes/2/Synthwave.png',  alt: 'FlowForge indicators — Synthwave v2 theme' },
-  { src: '/images/Chart Themes/2/Neon.png',       alt: 'FlowForge indicators — Neon v2 theme' },
-  { src: '/images/Chart Themes/2/Dusk.png',       alt: 'FlowForge indicators — Dusk v2 theme' },
-  { src: '/images/Chart Themes/2/Arctic.png',     alt: 'FlowForge indicators — Arctic v2 theme' },
-  { src: '/images/Chart Themes/2/Colorful.png',   alt: 'FlowForge indicators — Colorful v2 theme' },
-  { src: '/images/Chart Themes/2/Sunny.png',      alt: 'FlowForge indicators — Sunny v2 theme' },
-  { src: '/images/Chart Themes/2/Monochrome.png', alt: 'FlowForge indicators — Monochrome v2 theme' },
+  { src: '/images/Chart Themes/1/Synthwave.png', alt: 'FlowForge TradingView ORB indicator — Synthwave chart theme' },
+  { src: '/images/Chart Themes/1/Neon.png',      alt: 'FlowForge TradingView ORB indicator — Neon chart theme' },
+  { src: '/images/Chart Themes/1/Dusk.png',       alt: 'FlowForge TradingView ORB indicator — Dusk chart theme' },
+  { src: '/images/Chart Themes/1/Arctic.png',     alt: 'FlowForge TradingView ORB indicator — Arctic chart theme' },
+  { src: '/images/Chart Themes/1/Colorful.png',   alt: 'FlowForge TradingView ORB indicator — Colorful chart theme' },
+  { src: '/images/Chart Themes/1/Sunny.png',      alt: 'FlowForge TradingView ORB indicator — Sunny chart theme' },
+  { src: '/images/Chart Themes/1/Monochrome.png', alt: 'FlowForge TradingView ORB indicator — Monochrome chart theme' },
+  { src: '/images/Chart Themes/2/Synthwave.png',  alt: 'FlowForge TradingView ORB indicator — Synthwave v2 chart theme' },
+  { src: '/images/Chart Themes/2/Neon.png',       alt: 'FlowForge TradingView ORB indicator — Neon v2 chart theme' },
+  { src: '/images/Chart Themes/2/Dusk.png',       alt: 'FlowForge TradingView ORB indicator — Dusk v2 chart theme' },
+  { src: '/images/Chart Themes/2/Arctic.png',     alt: 'FlowForge TradingView ORB indicator — Arctic v2 chart theme' },
+  { src: '/images/Chart Themes/2/Colorful.png',   alt: 'FlowForge TradingView ORB indicator — Colorful v2 chart theme' },
+  { src: '/images/Chart Themes/2/Sunny.png',      alt: 'FlowForge TradingView ORB indicator — Sunny v2 chart theme' },
+  { src: '/images/Chart Themes/2/Monochrome.png', alt: 'FlowForge TradingView ORB indicator — Monochrome v2 chart theme' },
 ];
 
 export default function Hero() {

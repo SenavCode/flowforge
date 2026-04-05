@@ -7,7 +7,7 @@ import { MessageCircle } from 'lucide-react';
 
 const signalImages = [
   { src: '/discord-sign2.png', alt: 'Live ORB breakout alert in the FlowForge Discord' },
-  { src: '/discord-sign3.png', alt: 'FlowForge Discord signal — chart 2' },
+  { src: '/discord-sign3.png', alt: 'Live opening range breakout alert in FlowForge Discord members channel.' },
 ];
 
 const tickers = ['MES1!', 'MNQ1!', 'M2K1!', 'MYM1!', 'MGC1!', 'SIL1!', 'MHGK20', 'MCL1!', 'NG1!'];
@@ -30,6 +30,7 @@ export default function LiveAlerts() {
 
   return (
     <section
+      id="alerts"
       className="py-24 px-4"
       style={{ backgroundColor: '#0D0F0E' }}
     >

@@ -130,6 +130,24 @@ export default function HowItWorks() {
             </motion.div>
           ))}
         </motion.div>
+
+        {/* CTA */}
+        <motion.div
+          className="flex justify-center mt-12"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
+          <a
+            href="https://tally.so/r/BzBvLN"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center bg-[#4ADE80] text-[#0D0F0E] font-bold px-8 py-3.5 rounded-lg hover:bg-[#22C55E] transition-colors duration-200 text-base"
+          >
+            Start Free Trial
+          </a>
+        </motion.div>
       </div>
     </section>
   );

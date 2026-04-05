@@ -7,6 +7,7 @@ import { Menu, X } from 'lucide-react';
 
 const navLinks = [
   { label: 'Indicators', href: '#indicators' },
+  { label: 'How It Works', href: '#how-it-works' },
   { label: 'Features', href: '#features' },
   { label: 'Pricing', href: '#pricing' },
   { label: 'Community', href: '#community' },
@@ -56,7 +57,7 @@ export default function Navbar() {
         </a>
 
         {/* Desktop nav links */}
-        <ul className="hidden md:flex items-center gap-8" role="list">
+        <ul className="hidden md:flex items-center gap-6" role="list">
           {navLinks.map((link) => (
             <li key={link.href}>
               <Link
@@ -75,7 +76,7 @@ export default function Navbar() {
             href="https://tally.so/r/BzBvLN"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center bg-[#4ADE80] text-[#0D0F0E] font-semibold text-sm px-5 py-2 rounded-lg hover:bg-[#22C55E] transition-colors duration-200"
+            className="inline-flex items-center bg-[#4ADE80] text-[#0D0F0E] font-bold text-sm px-5 py-2.5 rounded-lg hover:bg-[#22C55E] transition-colors duration-200"
           >
             Start Free Trial
           </a>
@@ -112,7 +113,7 @@ export default function Navbar() {
                 href="https://tally.so/r/BzBvLN"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full text-center bg-[#4ADE80] text-[#0D0F0E] font-semibold text-sm px-5 py-2.5 rounded-lg hover:bg-[#22C55E] transition-colors"
+                className="block w-full text-center bg-[#4ADE80] text-[#0D0F0E] font-bold text-sm px-5 py-2.5 rounded-lg hover:bg-[#22C55E] transition-colors"
                 onClick={() => setMenuOpen(false)}
               >
                 Start Free Trial

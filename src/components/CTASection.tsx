@@ -29,8 +29,8 @@ export default function CTASection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0 }}
         >
-          Start Trading{' '}
-          <span className="text-[#4ADE80]">with Confidence</span>
+          Your ORB setups are already forming.{' '}
+          <span className="text-[#4ADE80]">See them clearly.</span>
         </motion.h2>
 
         {/* Subtext */}
@@ -41,7 +41,7 @@ export default function CTASection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
         >
-          Join traders who see the setup before the market moves.
+          Add the indicators to your chart. Free trial available. Cancel anytime on Gumroad.
         </motion.p>
 
         {/* CTA button */}
@@ -56,7 +56,7 @@ export default function CTASection() {
             href="https://tally.so/r/BzBvLN"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center bg-[#4ADE80] text-[#0D0F0E] font-bold text-lg px-8 py-4 rounded-xl hover:bg-[#22C55E] transition-colors duration-200"
+            className="inline-flex items-center bg-[#4ADE80] text-[#0D0F0E] font-bold text-lg px-8 py-4 rounded-lg hover:bg-[#22C55E] transition-colors duration-200"
           >
             Start Free Trial →
           </a>

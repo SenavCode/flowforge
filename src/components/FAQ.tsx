@@ -16,6 +16,11 @@ const faqs = [
       'The indicators work on any TradingView plan including the free one. For real-time futures data you may need a data subscription depending on your exchange.',
   },
   {
+    question: 'Can I use these alongside my existing TradingView indicators?',
+    answer:
+      'Yes. FlowForge indicators are standard Pine Script overlays. They add visual layers to your chart without modifying your other indicators or settings. You can add them to any chart you already use.',
+  },
+  {
     question: 'How do the Discord alerts work?',
     answer:
       'When the ORB indicator detects a confirmed opening range breakout (ORB) with all quality filters passing, an alert fires automatically to the members-only signals channel on Discord. You get the instrument, session, direction, and signal grade in real time.',
@@ -26,14 +31,19 @@ const faqs = [
       'Yes. We offer a free trial so you can test ORB Sessions on your charts before committing. Two of our indicators (FVG Imbalance Map and Volume Map) are completely free forever.',
   },
   {
-    question: 'What is an OK signal?',
+    question: 'How long is the free trial?',
+    answer:
+      'The trial gives you full access to ORB Sessions so you can test it on your charts. When it ends, your free indicators (FVG Imbalance Map and Volume Map) and Discord access stay active.',
+  },
+  {
+    question: 'How does the indicator decide which breakouts to alert on?',
     answer:
       'OK means all quality filters passed on the opening range breakout. The indicator grades every breakout and only fires an alert when conditions meet the filter criteria. This reduces noise and helps you focus on the cleanest setups.',
   },
   {
     question: 'How do I cancel?',
     answer:
-      'You can cancel anytime through Gumroad. No lock-in, no questions asked.',
+      'Log into your Gumroad account, find your FlowForge subscription, and cancel directly. No email required, no questions asked. Your access continues until the end of the billing period.',
   },
   {
     question: 'Are these indicators built in Pine Script?',
@@ -56,7 +66,7 @@ export default function FAQ() {
       <div className="max-w-3xl mx-auto">
         {/* Header */}
         <motion.div
-          className="text-center mb-12"
+          className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -86,7 +96,7 @@ export default function FAQ() {
                 className={`rounded-xl border transition-colors duration-200 ${
                   isOpen
                     ? 'border-[#4ADE80]/40 bg-[#0D0F0E]'
-                    : 'border-[#2A2F2D] bg-[#0D0F0E] hover:border-[#3D4440]'
+                    : 'border-[#2A2F2D] bg-[#0D0F0E] hover:border-[#4ADE80]/30'
                 }`}
               >
                 <button
@@ -127,6 +137,32 @@ export default function FAQ() {
               </div>
             );
           })}
+        </motion.div>
+
+        {/* CTA */}
+        <motion.div
+          className="flex flex-col items-center gap-4 mt-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <a
+            href="https://tally.so/r/BzBvLN"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center bg-[#4ADE80] text-[#0D0F0E] font-bold px-8 py-3.5 rounded-lg hover:bg-[#22C55E] transition-colors duration-200 text-base"
+          >
+            Start Free Trial
+          </a>
+          <a
+            href="https://discord.com/invite/tu7WTrur6z"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#9CA3AF] text-sm hover:text-[#4ADE80] transition-colors duration-200"
+          >
+            Still have questions? Join the Discord →
+          </a>
         </motion.div>
       </div>
     </section>

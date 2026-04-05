@@ -11,7 +11,7 @@ const freeFeatures = [
 
 const proFeatures = [
   'Everything in Free',
-  'ORB Sessions 15m (LO/NY/AS)',
+  'ORB Sessions London, New York & Asia opening ranges',
   'Live ORB breakout alerts on Discord',
   'Members-only Playbook',
   'Priority support',
@@ -35,10 +35,10 @@ export default function Pricing() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#F1F5F3] mb-4">
-            Simple, Transparent Pricing
+            $15/Month for the Indicators and the Alerts
           </h2>
           <p className="text-[#9CA3AF] text-lg max-w-xl mx-auto">
-            Start free. Upgrade when you&apos;re ready.
+            FVG Imbalance Map and Volume Map are free forever. Pro adds ORB Sessions and live Discord breakout alerts across 9 futures contracts.
           </p>
         </motion.div>
 
@@ -47,7 +47,7 @@ export default function Pricing() {
 
           {/* Pro — first in DOM = top on mobile */}
           <motion.div
-            className="flex flex-col relative bg-[#0D0F0E] border-[3px] border-[#4ADE80] rounded-2xl p-8 md:order-2"
+            className="flex flex-col relative bg-[#0D0F0E] border-[3px] border-[#4ADE80] rounded-xl p-8 md:order-2"
             initial={{ opacity: 0, y: 28 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -111,7 +111,7 @@ export default function Pricing() {
 
           {/* Free — second in DOM = bottom on mobile */}
           <motion.div
-            className="flex flex-col bg-[#0D0F0E] border border-[#4ADE80]/30 rounded-2xl p-8 md:order-1"
+            className="flex flex-col bg-[#0D0F0E] border border-[#4ADE80]/30 rounded-xl p-8 md:order-1"
             initial={{ opacity: 0, y: 28 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -137,10 +137,12 @@ export default function Pricing() {
             </ul>
 
             <a
-              href="#indicators"
+              href="https://discord.com/invite/tu7WTrur6z"
+              target="_blank"
+              rel="noopener noreferrer"
               className="block w-full text-center border border-[#2A2F2D] text-[#F1F5F3] font-semibold px-5 py-3 rounded-lg hover:border-[#4ADE80] hover:text-[#4ADE80] transition-colors duration-200"
             >
-              Get Free Indicators
+              Join Free on Discord
             </a>
           </motion.div>
 

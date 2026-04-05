@@ -30,7 +30,7 @@ const indicators: IndicatorCard[] = [
     flagship: true,
     title: 'ORB Sessions 15m (LO/NY/AS)',
     description:
-      'The flagship FlowForge indicator. Track London, New York, and Asia Opening Ranges directly on your chart with institutional-grade precision.',
+      'The flagship FlowForge indicator. Track London, New York, and Asia Opening Ranges on your chart with confirmed-close breakout detection and a built-in signal quality filter.',
     bullets: [
       'Tracks London, New York & Asia session opening ranges',
       'Detects breakouts on confirmed 5m closes',
@@ -124,10 +124,10 @@ export default function IndicatorShowcase() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#F1F5F3] mb-4">
-            The FlowForge Suite
+            Three Indicators. One Setup. Everything You Need for the ORB.
           </h2>
           <p className="text-[#9CA3AF] text-lg max-w-2xl mx-auto">
-            Three precision-built indicators designed to work together. Start free, go Pro when you&apos;re ready.
+            ORB Sessions tracks the range and confirms the break. FVG Map shows where price is likely to react. Volume Map keeps the chart clean. FVG and Volume are free.
           </p>
         </motion.div>
 
@@ -147,10 +147,10 @@ export default function IndicatorShowcase() {
             <motion.article
               key={card.title}
               variants={cardVariants}
-              className={`snap-start shrink-0 w-[82vw] md:w-auto flex flex-col rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 ${
+              className={`snap-start shrink-0 w-[82vw] md:w-auto flex flex-col rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-1 ${
                 card.flagship
                   ? 'border-2 border-[#4ADE80] bg-[#161918] hover:shadow-[0_0_28px_rgba(74,222,128,0.2)]'
-                  : 'border border-[#2A2F2D] bg-[#161918] hover:border-[#3D4440] hover:shadow-[0_0_16px_rgba(0,0,0,0.3)]'
+                  : 'border border-[#2A2F2D] bg-[#161918] hover:border-[#4ADE80]/40 hover:shadow-[0_0_16px_rgba(0,0,0,0.3)]'
               }`}
             >
               {/* Image */}
@@ -214,7 +214,7 @@ export default function IndicatorShowcase() {
                       href={card.ctaHref}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 w-full justify-center border border-[#2A2F2D] text-[#9CA3AF] font-semibold text-sm px-5 py-2.5 rounded-lg hover:border-[#3D4440] hover:text-[#F1F5F3] transition-colors duration-200"
+                      className="inline-flex items-center gap-2 w-full justify-center border border-[#2A2F2D] text-[#F1F5F3] font-semibold text-sm px-5 py-2.5 rounded-lg hover:border-[#4ADE80] hover:text-[#4ADE80] transition-colors duration-200"
                     >
                       {card.ctaLabel}
                       <ArrowRight size={14} />

@@ -94,10 +94,10 @@ export default function Home() {
         <Hero />
         <LiveAlerts />
         <IndicatorShowcase />
-        <Features />
         <HowItWorks />
-        <Pricing />
+        <Features />
         <Community />
+        <Pricing />
         <FAQ />
         <CTASection />
         <Footer />

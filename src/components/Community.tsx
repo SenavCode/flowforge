@@ -1,12 +1,12 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { MessageCircle } from 'lucide-react';
+import { MessageCircle, BarChart2, Bell, Target } from 'lucide-react';
 
 const pills = [
-  { emoji: '📊', label: 'Chart setups' },
-  { emoji: '🔔', label: 'New indicator alerts' },
-  { emoji: '🎯', label: 'Trade ideas' },
+  { icon: BarChart2, label: 'Automated ORB breakout alerts' },
+  { icon: Bell, label: 'Members-only trading playbook' },
+  { icon: Target, label: 'Shared MES/MNQ setups' },
 ];
 
 export default function Community() {
@@ -24,15 +24,15 @@ export default function Community() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          {/* Social proof badge */}
+          {/* Badge */}
           <span className="inline-flex items-center gap-2 bg-[#161918] border border-[#2A2F2D] text-[#9CA3AF] text-sm px-4 py-2 rounded-full">
             <MessageCircle size={14} className="text-[#4ADE80]" aria-hidden="true" />
-            Growing community of futures traders
+            Members-only Discord — live signals, setups, and support
           </span>
 
           {/* Headline */}
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#F1F5F3]">
-            Join the FlowForge Community
+            Live ORB Alerts. Real Setups. Direct Support.
           </h2>
 
           {/* Description */}
@@ -45,7 +45,7 @@ export default function Community() {
             href="https://discord.com/invite/tu7WTrur6z"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-[#5865F2] hover:bg-[#4752C4] text-white font-semibold text-lg px-8 py-4 rounded-xl transition-colors duration-200"
+            className="inline-flex items-center gap-3 bg-[#4ADE80] hover:bg-[#22C55E] text-[#0D0F0E] font-bold text-lg px-8 py-4 rounded-lg transition-colors duration-200"
             aria-label="Join FlowForge Trading on Discord"
           >
             <MessageCircle size={22} aria-hidden="true" />
@@ -62,9 +62,9 @@ export default function Community() {
               <span
                 key={pill.label}
                 role="listitem"
-                className="bg-[#161918] border border-[#2A2F2D] text-[#9CA3AF] text-sm px-4 py-2 rounded-full"
+                className="inline-flex items-center gap-2 bg-[#161918] border border-[#2A2F2D] text-[#9CA3AF] text-sm px-4 py-2 rounded-full"
               >
-                <span aria-hidden="true">{pill.emoji} </span>
+                <pill.icon size={14} className="text-[#4ADE80]" aria-hidden="true" />
                 {pill.label}
               </span>
             ))}

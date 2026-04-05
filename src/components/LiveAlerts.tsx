@@ -92,7 +92,7 @@ export default function LiveAlerts() {
 
               {/* Members Only badge — overlaid top-left */}
               <div className="absolute top-3 left-3 z-20">
-                <span className="bg-[#2A2F2D] text-[#F1F5F3] text-xs font-semibold px-3 py-1 rounded-full">
+                <span className="bg-[#161918] border border-[#2A2F2D] text-[#9CA3AF] text-xs font-semibold px-3 py-1 rounded-full">
                   Members Only
                 </span>
               </div>
@@ -144,13 +144,13 @@ export default function LiveAlerts() {
           transition={{ duration: 0.5, delay: 0.25 }}
         >
           <a
-            href="https://flowforgetrading.gumroad.com/l/flowforge"
+            href="https://tally.so/r/BzBvLN"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-[#4ADE80] hover:bg-[#22C55E] text-[#0D0F0E] font-bold text-base px-8 py-4 rounded-xl transition-colors duration-200"
-            aria-label="Get full access to FlowForge Pro"
+            className="inline-flex items-center gap-2 bg-[#4ADE80] hover:bg-[#22C55E] text-[#0D0F0E] font-bold text-base px-8 py-4 rounded-lg transition-colors duration-200"
+            aria-label="Start a free trial to get ORB breakout alerts"
           >
-            Get Full Access
+            Get ORB Alerts — Start Free Trial
           </a>
           <a
             href="https://discord.com/invite/tu7WTrur6z"
@@ -158,7 +158,7 @@ export default function LiveAlerts() {
             rel="noopener noreferrer"
             className="text-[#9CA3AF] text-sm hover:text-[#F1F5F3] transition-colors duration-200"
           >
-            Or join the free community →
+            Join the free Discord →
           </a>
         </motion.div>
 

@@ -37,14 +37,14 @@ const features = [
     iconColor: '#4ADE80',
     title: 'Live Session Dashboard',
     description:
-      'Real-time session statistics at a glance, right on your chart.',
+      'Session name, ORB high/low, breakout status, and direction — all visible on-chart without opening settings.',
   },
   {
     icon: Target,
     iconColor: '#4ADE80',
-    title: 'Designed for Futures',
+    title: 'Micro Futures Native',
     description:
-      'Purpose-built for intraday futures traders. No bloat, no unnecessary features.',
+      'Pre-configured for MES, MNQ, MYM, M2K, and MCL. Session times, alert formatting, and tick data all calibrated for micro contract intraday structure.',
   },
 ];
 
@@ -75,10 +75,10 @@ export default function Features() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#F1F5F3] mb-4">
-            Built for Futures Traders
+            What&apos;s Actually Under the Hood
           </h2>
           <p className="text-[#9CA3AF] text-lg max-w-2xl mx-auto">
-            Every feature purpose-built for intraday futures trading.
+            Session detection, signal filtering, multi-timeframe FVG mapping — here&apos;s how the pieces connect.
           </p>
         </motion.div>
 
@@ -111,6 +111,30 @@ export default function Features() {
               </p>
             </motion.div>
           ))}
+        </motion.div>
+
+        {/* CTA */}
+        <motion.div
+          className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <a
+            href="https://tally.so/r/BzBvLN"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center bg-[#4ADE80] text-[#0D0F0E] font-bold px-8 py-3.5 rounded-lg hover:bg-[#22C55E] transition-colors duration-200 text-base"
+          >
+            Start Free Trial
+          </a>
+          <a
+            href="#indicators"
+            className="text-[#9CA3AF] text-sm hover:text-[#4ADE80] transition-colors duration-200"
+          >
+            Or explore the indicators →
+          </a>
         </motion.div>
       </div>
     </section>

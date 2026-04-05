@@ -102,7 +102,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          Precision-built TradingView indicators for futures traders
+          ORB boxes, FVG zones, and live breakout alerts — all on one chart.
         </motion.p>
 
         {/* CTAs */}
@@ -129,6 +129,16 @@ export default function Hero() {
             Get Full Access
           </a>
         </motion.div>
+
+        {/* Micro-copy */}
+        <motion.p
+          className="text-[#9CA3AF] text-sm"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+        >
+          Free trial available. Full access via Gumroad — $15/mo.
+        </motion.p>
 
         {/* Chart image carousel */}
         <motion.div

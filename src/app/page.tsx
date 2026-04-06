@@ -1,5 +1,6 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
+import SocialProof from '@/components/SocialProof';
 import LiveAlerts from '@/components/LiveAlerts';
 import IndicatorShowcase from '@/components/IndicatorShowcase';
 import Features from '@/components/Features';
@@ -92,6 +93,7 @@ export default function Home() {
       <main>
         <Navbar />
         <Hero />
+        <SocialProof />
         <LiveAlerts />
         <IndicatorShowcase />
         <HowItWorks />

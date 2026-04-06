@@ -54,7 +54,7 @@ export default function LiveAlerts() {
           </h2>
 
           <p className="text-[#9CA3AF] text-lg max-w-2xl leading-relaxed">
-            Real-time ORB breakout alerts delivered to Discord. Only OK-graded signals, only clean setups. Available exclusively for members.
+            Real-time ORB breakout alerts across 9 futures contracts. Only OK-graded signals where all 7 quality filters pass. London, New York, and Asia sessions covered.
           </p>
         </motion.div>
 

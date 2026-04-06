@@ -38,7 +38,7 @@ const faqs = [
   {
     question: 'How does the indicator decide which breakouts to alert on?',
     answer:
-      'OK means all quality filters passed on the opening range breakout. The indicator grades every breakout and only fires an alert when conditions meet the filter criteria. This reduces noise and helps you focus on the cleanest setups.',
+      'The indicator runs every breakout through 7 independent quality filters. They check candle structure, volume confirmation, trend alignment, and whether price is overextended. Zero fails means OK, that\'s a clean signal. You control how many fails you\'ll tolerate through Smart Alert thresholds.',
   },
   {
     question: 'How do I cancel?',

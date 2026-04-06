@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Clock, Layers, Palette, Filter, BarChart2, Target } from 'lucide-react';
+import { Clock, Layers, Palette, Filter, BarChart2, Target, SlidersHorizontal } from 'lucide-react';
 
 const features = [
   {
@@ -21,23 +21,23 @@ const features = [
   {
     icon: Palette,
     iconColor: '#4ADE80',
-    title: 'One-Click Theming',
+    title: '7 Built-In Themes',
     description:
-      'All FlowForge indicators share a unified theme system. Change once, update everywhere.',
+      'Synthwave, Neon, Arctic, Dusk, Sunny, Monochrome, or Colorful. Each theme applies to ORB boxes, breakout labels, filter labels, dashboard, VWAP, and candles. Pick once, everything updates.',
   },
   {
     icon: Filter,
     iconColor: '#4ADE80',
-    title: 'Built-In Signal Grading',
+    title: '7-Filter Quality Grading',
     description:
-      "Not all breakouts are equal. The ORB filter system grades each signal so you can focus on high-quality setups.",
+      'Every breakout runs through 7 independent quality filters covering candle structure, volume confirmation, trend alignment, and overextension detection. Zero fails means OK. You see which filters passed and which failed.',
   },
   {
     icon: BarChart2,
     iconColor: '#4ADE80',
     title: 'Live Session Dashboard',
     description:
-      'Session name, ORB high/low, breakout status, and direction, all visible on-chart without opening settings.',
+      'Session name, ORB range, breakout direction, and maximum R-factor extension per session, all updating in real time on your chart. Frozen at session cutoff so you can review.',
   },
   {
     icon: Target,
@@ -45,6 +45,13 @@ const features = [
     title: 'Micro Futures Native',
     description:
       'Pre-configured for MES, MNQ, MYM, M2K, and MCL. Session times, alert formatting, and tick data all calibrated for micro contract intraday structure.',
+  },
+  {
+    icon: SlidersHorizontal,
+    iconColor: '#4ADE80',
+    title: 'Smart Alert Thresholds',
+    description:
+      'Choose how many filter fails you\'ll tolerate before an alert fires. Want only clean OK setups? Or comfortable with 1-2 fails? Dial in your conviction level per session.',
   },
 ];
 

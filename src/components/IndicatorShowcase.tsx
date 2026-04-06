@@ -32,10 +32,12 @@ const indicators: IndicatorCard[] = [
     description:
       'The flagship FlowForge indicator. Track London, New York, and Asia Opening Ranges on your chart with confirmed-close breakout detection and a built-in signal quality filter.',
     bullets: [
-      'Tracks London, New York & Asia session opening ranges',
-      'Detects breakouts on confirmed 5m closes',
-      'Built-in signal quality filter system',
-      'Live session statistics dashboard on-chart',
+      '7-filter quality grading system',
+      'Confirmed 5m close breakout detection',
+      'Live session dashboard with R-factor tracking',
+      'Smart Alerts with adjustable conviction thresholds',
+      'Built-in VWAP with statistical bands',
+      '7 built-in chart themes',
     ],
     ctaLabel: 'Start Free Trial',
     ctaHref: 'https://tally.so/r/BzBvLN',

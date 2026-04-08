@@ -38,7 +38,7 @@ export default function Pricing() {
             $15/Month for the Indicators and the Alerts
           </h2>
           <p className="text-[#9CA3AF] text-lg max-w-xl mx-auto">
-            FVG Imbalance Map and Volume Map are free forever. Pro adds ORB Sessions and live Discord breakout alerts across 9 futures contracts.
+            FVG Imbalance Map and Volume Map are free forever. Pro adds ORB Sessions and live Discord breakout alerts across multiple futures contracts.
           </p>
         </motion.div>
 

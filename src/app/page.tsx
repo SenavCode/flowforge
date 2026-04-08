@@ -20,7 +20,7 @@ const faqSchema = {
       name: 'What markets does this work on?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Any market available on TradingView. We run alerts on 9 futures contracts (MES1!, MNQ1!, M2K1!, MYM1!, MGC1!, SIL1!, MHGK20, MCL1!, NG1!) but the indicator works on stocks, forex, crypto, and commodities too.',
+        text: 'Any market available on TradingView. We run alerts on multiple futures contracts but the indicator works on stocks, forex, crypto, and commodities too.',
       },
     },
     {

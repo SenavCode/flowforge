@@ -10,8 +10,6 @@ const signalImages = [
   { src: '/discord-sign3.png', alt: 'Live opening range breakout alert in FlowForge Discord members channel.' },
 ];
 
-const tickers = ['MES1!', 'MNQ1!', 'M2K1!', 'MYM1!', 'MGC1!', 'SIL1!', 'MHGK20', 'MCL1!', 'NG1!'];
-
 const INTERVAL_MS = 4000;
 
 export default function LiveAlerts() {
@@ -54,7 +52,7 @@ export default function LiveAlerts() {
           </h2>
 
           <p className="text-[#9CA3AF] text-lg max-w-2xl leading-relaxed">
-            Real-time ORB breakout alerts across 9 futures contracts. Only OK-graded signals where all 7 quality filters pass. London, New York, and Asia sessions covered.
+            Real-time ORB breakout alerts across multiple futures contracts. Only OK-graded signals where all 9 quality filters pass. London, New York, and Asia sessions covered.
           </p>
         </motion.div>
 
@@ -116,24 +114,16 @@ export default function LiveAlerts() {
           </div>
         </motion.div>
 
-        {/* Ticker badges */}
-        <motion.div
-          className="flex flex-wrap justify-center gap-2"
+        {/* Contract coverage */}
+        <motion.p
+          className="text-[#9CA3AF] text-sm"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          aria-label="Covered futures contracts"
         >
-          {tickers.map((ticker) => (
-            <span
-              key={ticker}
-              className="bg-[#161918] border border-[#2A2F2D] text-[#9CA3AF] text-xs font-mono font-semibold px-3 py-1.5 rounded-full tracking-wide"
-            >
-              {ticker}
-            </span>
-          ))}
-        </motion.div>
+          Covering multiple futures contracts across London, New York, and Asia sessions.
+        </motion.p>
 
         {/* CTA */}
         <motion.div

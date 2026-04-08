@@ -5,7 +5,6 @@ import { motion } from 'framer-motion';
 const stats = [
   { number: '400+', label: 'Traders with access' },
   { number: '45',   label: 'OK signals this week' },
-  { number: '9',    label: 'Futures contracts covered' },
 ];
 
 export default function SocialProof() {

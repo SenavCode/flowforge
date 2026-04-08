@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Clock, Layers, Palette, Filter, BarChart2, Target, SlidersHorizontal } from 'lucide-react';
+import { Clock, Layers, Palette, Filter, BarChart2, Target } from 'lucide-react';
 
 const features = [
   {
@@ -28,9 +28,9 @@ const features = [
   {
     icon: Filter,
     iconColor: '#4ADE80',
-    title: '7-Filter Quality Grading',
+    title: '9-Filter Quality Grading',
     description:
-      'Every breakout runs through 7 independent quality filters covering candle structure, volume confirmation, trend alignment, and overextension detection. Zero fails means OK. You see which filters passed and which failed.',
+      'Every breakout runs through 9 independent quality filters covering candle structure, volume confirmation, trend alignment, momentum, overextension detection, and chase protection. Zero fails means OK.',
   },
   {
     icon: BarChart2,
@@ -45,13 +45,6 @@ const features = [
     title: 'Micro Futures Native',
     description:
       'Pre-configured for MES, MNQ, MYM, M2K, and MCL. Session times, alert formatting, and tick data all calibrated for micro contract intraday structure.',
-  },
-  {
-    icon: SlidersHorizontal,
-    iconColor: '#4ADE80',
-    title: 'Smart Alert Thresholds',
-    description:
-      'Choose how many filter fails you\'ll tolerate before an alert fires. Want only clean OK setups? Or comfortable with 1-2 fails? Dial in your conviction level per session.',
   },
 ];
 

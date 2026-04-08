@@ -8,7 +8,7 @@ const faqs = [
   {
     question: 'What markets does this work on?',
     answer:
-      'Any market available on TradingView. We run alerts on 9 futures contracts (MES1!, MNQ1!, M2K1!, MYM1!, MGC1!, SIL1!, MHGK20, MCL1!, NG1!) but the indicator works on stocks, forex, crypto, and commodities too.',
+      'Any market available on TradingView. We run alerts on multiple futures contracts but the indicator works on stocks, forex, crypto, and commodities too.',
   },
   {
     question: 'Do I need a paid TradingView plan?',
@@ -38,12 +38,7 @@ const faqs = [
   {
     question: 'How does the indicator decide which breakouts to alert on?',
     answer:
-      'The indicator runs every breakout through 7 independent quality filters. They check candle structure, volume confirmation, trend alignment, and whether price is overextended. Zero fails means OK, that\'s a clean signal. You control how many fails you\'ll tolerate through Smart Alert thresholds.',
-  },
-  {
-    question: 'How do I cancel?',
-    answer:
-      'Log into your Gumroad account, find your FlowForge subscription, and cancel directly. No email required, no questions asked. Your access continues until the end of the billing period.',
+      'The indicator runs every breakout through 9 independent quality filters. They check candle structure, volume confirmation, trend alignment, momentum, whether price is overextended, and whether the move has already run too far. Zero fails means OK, that\'s a clean signal. You control how many fails you\'ll tolerate through Smart Alert thresholds.',
   },
   {
     question: 'Are these indicators built in Pine Script?',

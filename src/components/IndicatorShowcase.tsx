@@ -30,14 +30,15 @@ const indicators: IndicatorCard[] = [
     flagship: true,
     title: 'ORB Sessions 15m (LO/NY/AS)',
     description:
-      'The flagship FlowForge indicator. Track London, New York, and Asia Opening Ranges on your chart with confirmed-close breakout detection and a built-in signal quality filter.',
+      'The flagship FlowForge indicator. Track London, New York, and Asia Opening Ranges on your chart with confirmed-close breakout detection and a built-in signal quality filter. Available as 15m ORB and 5m ORB for tighter ranges.',
     bullets: [
-      '9-filter quality grading system',
-      'Confirmed 5m close breakout detection',
+      '8-filter quality grading system',
+      'Confirmed close breakout detection',
       'Live session dashboard with R-factor tracking',
       'Smart Alerts with adjustable conviction thresholds',
       'Built-in VWAP with statistical bands',
       '7 built-in chart themes',
+      'Available in 15m and 5m ORB versions',
     ],
     ctaLabel: 'Start Free Trial',
     ctaHref: 'https://tally.so/r/BzBvLN',

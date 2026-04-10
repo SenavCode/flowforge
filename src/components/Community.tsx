@@ -4,9 +4,9 @@ import { motion } from 'framer-motion';
 import { MessageCircle, BarChart2, Bell, Target } from 'lucide-react';
 
 const pills = [
-  { icon: BarChart2, label: 'Automated ORB breakout alerts' },
-  { icon: Bell, label: 'Members-only trading playbook' },
-  { icon: Target, label: 'Community chart discussion' },
+  { icon: BarChart2, label: 'OK break alerts' },
+  { icon: Bell, label: 'Reverse ORB signals' },
+  { icon: Target, label: 'Free rotating preview channel' },
 ];
 
 export default function Community() {

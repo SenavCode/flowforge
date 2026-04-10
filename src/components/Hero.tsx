@@ -80,7 +80,7 @@ export default function Hero() {
         >
           <span className="inline-flex items-center gap-2 bg-[#161918] border border-[#2A2F2D] text-[#4ADE80] text-xs font-medium px-4 py-1.5 rounded-full">
             <span className="w-1.5 h-1.5 rounded-full bg-[#4ADE80] animate-pulse" aria-hidden="true" />
-            9-filter breakout grading for TradingView
+            8-filter breakout grading for TradingView
           </span>
         </motion.div>
 

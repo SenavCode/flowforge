@@ -7,12 +7,13 @@ const freeFeatures = [
   'FVG Imbalance Map',
   'Volume Map',
   'Community Discord access',
+  'Rotating daily signal preview on Discord',
 ];
 
 const proFeatures = [
   'Everything in Free',
   'ORB Sessions London, New York & Asia opening ranges',
-  'Live ORB breakout alerts on Discord',
+  '4 Discord signal channels: OK breaks, reverse ORB, VWAP Band 3, VWAP Band 4',
   'Members-only Playbook',
   'Priority support',
   'Early access to new indicators',

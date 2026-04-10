@@ -28,9 +28,9 @@ const features = [
   {
     icon: Filter,
     iconColor: '#4ADE80',
-    title: '9-Filter Quality Grading',
+    title: '8-Filter Quality Grading',
     description:
-      'Every breakout runs through 9 independent quality filters covering candle structure, volume confirmation, trend alignment, momentum, overextension detection, and chase protection. Zero fails means OK.',
+      'Every breakout runs through 8 independent quality filters covering candle structure, volume confirmation, trend alignment, momentum, statistical band positioning, and chase protection. Zero fails means OK.',
   },
   {
     icon: BarChart2,
@@ -44,7 +44,7 @@ const features = [
     iconColor: '#4ADE80',
     title: 'Micro Futures Native',
     description:
-      'Pre-configured for MES, MNQ, MYM, M2K, and MCL. Session times, alert formatting, and tick data all calibrated for micro contract intraday structure.',
+      'Pre-configured for MES, MNQ, MYM, M2K, MCL, MGC, SIL, and NG. Session times, alert formatting, and tick data all calibrated for micro contract intraday structure.',
   },
 ];
 

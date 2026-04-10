@@ -38,7 +38,7 @@ const faqs = [
   {
     question: 'How does the indicator decide which breakouts to alert on?',
     answer:
-      'The indicator runs every breakout through 9 independent quality filters. They check candle structure, volume confirmation, trend alignment, momentum, whether price is overextended, and whether the move has already run too far. Zero fails means OK, that\'s a clean signal. You control how many fails you\'ll tolerate through Smart Alert thresholds.',
+      'The indicator runs every breakout through 8 independent quality filters. They check candle structure, volume confirmation, trend alignment, momentum, statistical band positioning, and whether the move has already run too far. Zero fails means OK, that\'s a clean signal. You control how many fails you\'ll tolerate through Smart Alert thresholds.',
   },
   {
     question: 'Are these indicators built in Pine Script?',
